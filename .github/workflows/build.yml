@@ -78,7 +78,7 @@ jobs:
       - name: Cache ImageMagick Setup
         if: matrix.windows
         id: cache-imagemagick
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: app
           key: imagemagick-${{ steps.tag.outputs.TAG }}-${{ matrix.im_arch }}
@@ -110,7 +110,7 @@ jobs:
 
       - name: Cache LLVM and Clang
         id: cache-llvm
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ runner.temp }}/llvm
           key: llvm-12
