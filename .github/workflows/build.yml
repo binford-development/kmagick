@@ -159,7 +159,7 @@ jobs:
         run: ./${{ matrix.debug.tool }}
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: build-${{ matrix.target }}
           path: kmagick-rs/rust/target/${{ matrix.target }}/debug/${{ matrix.output }}
@@ -181,7 +181,7 @@ jobs:
           ./gradlew kmagick:build
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: build-kmagick
           path: kmagick-rs/kmagick/build/libs/kmagick*.jar
