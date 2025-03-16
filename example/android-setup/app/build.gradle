@@ -1,5 +1,6 @@
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //implementation 'org.objenesis:objenesis:3.2'
     // implementation 'org.objenesis:objenesis:3.2'
     // ...
 }
